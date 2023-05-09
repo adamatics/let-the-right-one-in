@@ -45,6 +45,14 @@ GITLAB_CLIENT_ID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 GITLAB_CLIENT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
+Additionally, in order for the oauth state to be passed correctly in the configuration, you'll need to generate a key
+for JupyterHub called `JUPYTERHUB_CRYPT_KEY` and pass it into JupyterHub as an environment variable. You can safely use
+the one placed in `docker-compose.yml`, but if you want to generate your own, it can be done with:
+
+```
+openssl rand -hex 32
+```
+
 # jupyterhub-saml
 
 This repository contains some example code to get you started with a SAML provider
