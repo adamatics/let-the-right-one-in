@@ -17,6 +17,7 @@ c.GitLabOAuthenticator.client_secret = os.environ.get('GITLAB_CLIENT_SECRET')
 c.GitLabOAuthenticator.oauth_callback_url = "http://localhost:8000/hub/oauth_callback"
 c.GitLabOAuthenticator.scope = ['read_user']
 c.Authenticator.enable_auth_state = True
+
 #############################################################################
 #
 # DOCKER SPAWNER CONFIGURATION

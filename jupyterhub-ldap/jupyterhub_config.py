@@ -48,6 +48,5 @@ c.JupyterHub.db_url = "sqlite:////data/jupyterhub.sqlite"
 c.JupyterHub.authenticator_class = "ldapauthenticator.LDAPAuthenticator"
 c.LDAPAuthenticator.server_address = "ldap://ldap:10389"
 c.LDAPAuthenticator.bind_dn_template = [
-#    "cn=admin,dc=planetexpress,dc=com",
-    "cn={username},ou=people,dc=planetexpress,dc=com"
+    "cn={username},ou=people,dc=planetexpress,dc=com",
 ]

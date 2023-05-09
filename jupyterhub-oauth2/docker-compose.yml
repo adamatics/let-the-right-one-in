@@ -5,14 +5,6 @@
 version: "3"
 
 services:
-  #  keycloak:
-  #    image: jboss/keycloak:11.0.2
-  #    container_name: keycloak
-  #    network_mode: "host"
-  #    environment:
-  #      KEYCLOAK_USER: admin
-  #      KEYCLOAK_PASSWORD: admin
-  #      KC_HOSTNAME: localhost
 
   hub:
     build:
@@ -49,8 +41,6 @@ services:
       # Using this run command
       DOCKER_SPAWN_CMD: start-singleuser.sh
       JUPYTERHUB_CRYPT_KEY: fc59848bb7b0b6a9b296e0ac51de136edaf6612915db76daa5b5f70f47fcee29
-        #      OAUTH2_AUTHORIZE_URL: http://localhost:8080/auth/realms/master/protocol/openid-connect/auth
-        #      OAUTH2_TOKEN_URL: http://localhost:8080/auth/realms/master/protocol/openid-connect/token
 
 volumes:
   jupyterhub-data:
