@@ -34,6 +34,19 @@ has been configured with some default users, username/passwords:
  - professor/professor
  - bender/bender
 
+## Debugging LDAP bindings
+
+I can be hard to get the binding DN template formulated correctly, and `ldapsearch` can be a valuable tool to test the
+template you need to use in the jupyterhub configuration.
+
+Once the docker containers have been started, you can execute the `ldapsearch` query against the LDAP server with the
+command:
+
+```
+docker exec -it jupyterhub-ldap ldapsearch -b "dc=planetexpress,dc=com" -D "cn=professor,ou=people,dc=planetexpress,dc=com" -H ldap://ldap:10389 -w professor
+```
+
+
 # jupyterhub-oauth2
 
 This configuration requires you to setup an application in GitLab to handle the single sign-on process through OAuth2.
