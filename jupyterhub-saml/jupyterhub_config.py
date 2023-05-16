@@ -6,6 +6,8 @@ import os
 
 c = get_config()  # noqa: F821
 
+import samlauthenticator
+
 # We rely on environment variables to configure JupyterHub so that we
 # avoid having to rebuild the JupyterHub container every time we change a
 # configuration parameter.
@@ -31,7 +33,7 @@ c.DockerSpawner.debug = True
 
 ## JupyterHub configuration related to Dockerspawning
 # User containers will access hub by container name on the Docker network
-c.JupyterHub.hub_ip = "jupyterhub-ldap"
+c.JupyterHub.hub_ip = "hub"
 c.JupyterHub.hub_port = 8080
 # Persist hub data on volume mounted inside container
 c.JupyterHub.cookie_secret_file = "/data/jupyterhub_cookie_secret"

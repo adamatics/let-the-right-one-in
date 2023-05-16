@@ -37,6 +37,7 @@ services:
       DOCKER_NOTEBOOK_DIR: /home/jovyan/work
       # Using this run command
       DOCKER_SPAWN_CMD: start-singleuser.sh
+      JUPYTERHUB_CRYPT_KEY: fc59848bb7b0b6a9b296e0ac51de136edaf6612915db76daa5b5f70f47fcee29
 
 volumes:
   jupyterhub-data:
